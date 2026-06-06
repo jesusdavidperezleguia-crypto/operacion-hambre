@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Operación Hambre</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet"
+    />
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            Operación<span>Hambre</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#ia">IA Militar</a></li>
+            <li><a href="#pedido">Pedido</a></li>
+        </ul>
+
+        <button id="modoBtn" class="dark-btn">
+            🌙
+        </button>
+
+    </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+
+    <div class="hero-container">
+
+        <div class="hero-text">
+
+            <h1>Operación Hambre</h1>
+
+            <p>
+                atacamos el hambre mas no tu bolsillo
+            </p>
+
+            <p class="hero-extra">
+                Comida rápida táctica + inteligencia artificial para recomendarte
+                las mejores combinaciones y hacer cada misión más poderosa.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#menu" class="btn-primary">
+                    Ver menú
+                </a>
+
+                <button onclick="recomendar()" class="btn-secondary">
+                    🤖 El General te Recomienda
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800"
+                alt="Hamburguesa Operación Hambre"
+            />
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROPUESTA DE VALOR -->
+<section class="section-container valor">
+
+    <h2>🔥 Nuestra misión</h2>
+
+    <div class="valor-grid">
+
+        <article class="valor-card">
+            <h3>⚡ Rapidez táctica</h3>
+            <p>
+                Preparamos pedidos rápidos para soldados del hambre
+                que necesitan atacar el antojo sin perder tiempo.
+            </p>
+        </article>
+
+        <article class="valor-card">
+            <h3>💰 Precios accesibles</h3>
+            <p>
+                Diseñamos combos económicos para que cualquier cliente
+                pueda disfrutar sin destruir su bolsillo.
+            </p>
+        </article>
+
+        <article class="valor-card">
+            <h3>🤖 Inteligencia Artificial</h3>
+            <p>
+                Nuestro sistema "El General te Recomienda" analiza
+                pedidos, gustos y combinaciones populares para sugerir
+                productos que aumenten tu experiencia.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+<!-- IA -->
+<section id="ia" class="section-container ia-section">
+
+    <h2>🧠 El General te Recomienda</h2>
+
+    <div class="ia-box">
+
+        <p>
+            Nuestro motor de recomendación por IA detecta patrones de compra,
+            analiza tu carrito y genera recomendaciones automáticas de
+            upselling y cross-selling.
+        </p>
+
+        <div class="ia-example">
+
+            <h3>📢 el general dice</h3>
+
+            <p>
+                “¡GENERAL! VEO QUE PEDISTE UNA SUPREMACÍA.
+                ¿AGREGAS PAPAS POR SOLO $3.000?
+                73% DE LOS SOLDADOS LO HICIERON.”
+            </p>
+
+        </div>
+
+        <button onclick="recomendar()" class="btn-primary">
+            Activar recomendación IA
+        </button>
+
+    </div>
+
+</section>
+
+<!-- MENÚ -->
+<section id="menu" class="section-container">
+
+    <h2>🍔 Menú táctico</h2>
+
+    <div class="menu-grid">
+
+        <article class="card">
+
+            <h3>🍔 Táctica</h3>
+
+            <p>
+                Hamburguesa clásica militar.
+            </p>
+
+            <span>$14.000</span>
+
+            <button onclick="agregarCarrito('Táctica',14000)">
+                Agregar
+            </button>
+
+        </article>
+
+        <article class="card">
+
+            <h3>🔥 Supremacía</h3>
+
+            <p>
+                Doble carne y queso extremo.
+            </p>
+
+            <span>$18.000</span>
+
+            <button onclick="agregarCarrito('Supremacía',18000)">
+                Agregar
+            </button>
+
+        </article>
+
+        <article class="card">
+
+            <h3>💣 Impacto Doble</h3>
+
+            <p>
+                La más poderosa del menú.
+            </p>
+
+            <span>$22.000</span>
+
+            <button onclick="agregarCarrito('Impacto Doble',22000)">
+                Agregar
+            </button>
+
+        </article>
+
+        <article class="card">
+
+            <h3>🛡 Escudero</h3>
+
+            <p>
+                Picada táctica personal.
+            </p>
+
+            <span>$15.000</span>
+
+            <button onclick="agregarCarrito('Escudero',15000)">
+                Agregar
+            </button>
+
+        </article>
+
+        <article class="card">
+
+            <h3>⚡ Terremoto</h3>
+
+            <p>
+                Picada extrema para compartir.
+            </p>
+
+            <span>$20.000</span>
+
+            <button onclick="agregarCarrito('Terremoto',20000)">
+                Agregar
+            </button>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- CARRITO -->
+<section class="section-container">
+
+    <h2>🛒 Carrito de misión</h2>
+
+    <div id="carrito"></div>
+
+    <h3 id="total">
+        Total: $0
+    </h3>
+
+    <div class="ia-alerta">
+
+        <h3>🤖 Recomendación automática</h3>
+
+        <p id="recomendacionTexto">
+            Agrega productos al carrito para recibir sugerencias inteligentes.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- PEDIDO -->
+<section id="pedido" class="section-container">
+
+    <h2>🚀 Haz tu pedido</h2>
+
+    <p class="pedido-info">
+        Finaliza tu misión enviando el pedido automáticamente por WhatsApp.
+    </p>
+
+    <form id="formPedido">
+
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Tu nombre"
+            required
+        />
+
+        <button type="submit">
+            📲 Enviar pedido por WhatsApp
+        </button>
+
+    </form>
+
+    <p id="mensaje"></p>
+
+</section>
+
+<!-- INNOVACIÓN -->
+<section class="section-container innovacion">
+
+    <h2>💡 Innovación del proyecto</h2>
+
+    <div class="innovacion-grid">
+
+        <article class="innovacion-card">
+            <h3>📲 Integración con WhatsApp</h3>
+
+            <p>
+                El cliente puede realizar pedidos de forma rápida y automática
+                desde cualquier dispositivo móvil.
+            </p>
+        </article>
+
+        <article class="innovacion-card">
+            <h3>🧠 Motor de IA</h3>
+
+            <p>
+                El sistema recomienda productos según tendencias,
+                historial y comportamiento del carrito.
+            </p>
+        </article>
+
+        <article class="innovacion-card">
+            <h3>📈 Estrategia de ventas</h3>
+
+            <p>
+                El upselling automático incrementa las ventas y mejora
+                la experiencia del usuario.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>
+        © 2026 Operación Hambre - Startup tecnológica gastronómica
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
